@@ -1,0 +1,164 @@
+@import "../variables/variables";
+
+/* Header */
+
+.header {
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 18px;
+  width: 100%;
+  background-color: $color-bg-primary;
+  filter: drop-shadow(0 0 3px #2d1e1e32);
+
+  &__title {
+    font-size: 32px;
+    color: $color-primary;
+  }
+
+  &__nav {
+    gap: 16px;
+  }
+}
+
+/* NavBar */
+.nav {
+  display: flex;
+
+  &__link {
+    font-size: 13px;
+    text-transform: uppercase;
+    color: $color-primary;
+  }
+}
+
+/* Hamburger */
+.menu {
+  &__hamburger {
+    display: none;
+  }
+  &__btn {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 25px;
+    right: 25px;
+    width: 26px;
+    height: 26px;
+    transform: translateY(7px);
+    cursor: pointer;
+    z-index: 1;
+  }
+  // добавляем "гамбургер"
+  &__btn > span,
+  &__btn > span::before,
+  &__btn > span::after {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: $color-primary;
+  }
+
+  &__btn > span::before {
+    content: "";
+    top: -8px;
+  }
+  &__btn > span::after {
+    content: "";
+    top: 8px;
+  }
+  // контейнер меню
+  &__box {
+    display: block;
+    position: fixed;
+    visibility: hidden;
+    top: 0;
+    right: -100px;
+    width: 200px;
+    height: 100vh;
+    margin: 0;
+    padding: 80px 10px;
+    list-style: none;
+    text-align: center;
+    background-color: #eceff1be;
+    box-shadow: 1px 0px 6px rgba(0, 0, 0, 0.2);
+  }
+  // элементы меню
+  &__item {
+    display: block;
+    padding: 12px 24px;
+    text-align: left;
+    color: $color-secondary;
+    font-size: 13px;
+  }
+  &__item:hover {
+    background-color: $color-primary;
+  }
+}
+
+#menu__toggle {
+  opacity: 0;
+  &:checked ~ .menu__btn > span {
+    transform: rotate(45deg);
+    transition: 0.3s ease-in-out;
+    background-color: $color-secondary;
+  }
+  &:checked ~ .menu__btn > span::before {
+    top: 0;
+    transform: rotate(0);
+    transition: 0.3s ease-in-out;
+    background-color: transparent;
+  }
+  &:checked ~ .menu__btn > span::after {
+    top: 0;
+    transform: rotate(90deg);
+    transition: 0.3s ease-in-out;
+    background-color: $color-secondary;
+  }
+  &:checked ~ .menu__box {
+    visibility: visible;
+    right: 0;
+    transition: 0.3s ease-in-out;
+  }
+}
+
+@media only screen and (max-width: 767.98px) {
+  .header {
+    &__logo {
+      height: 25px;
+    }
+    &__title {
+      font-size: 30px;
+    }
+    &__nav {
+      display: none;
+    }
+  }
+
+  .menu {
+    &__hamburger {
+      display: block;
+    }
+  }
+}
+
+@media only screen and (max-width: 575.98px) {
+  .header {
+    display: block;
+    height: 60px;
+    transition: 0.3s ease-in-out;
+
+    &__logo {
+      padding: 2px;
+    }
+  }
+
+  .menu {
+    &__btn {
+      transform: translateY(13px);
+    }
+  }
+}

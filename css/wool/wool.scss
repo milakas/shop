@@ -1,0 +1,48 @@
+@import "../variables/variables";
+
+/* Wool Section */
+
+.wool {
+  padding: 5% 10%;
+
+  &__bg-image {
+    background-image: url(../images/wool.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+  }
+
+  &__content {
+    width: 300px;
+    margin-left: auto;
+    padding: 0 15px;
+    color: $color-primary;
+  }
+
+  &__heading {
+    margin-bottom: 51px;
+    font-size: 36px;
+    line-height: 42px;
+  }
+
+  &__text,
+  &__links {
+    font-size: 13px;
+    line-height: 16.51px;
+    text-transform: uppercase;
+  }
+
+  &__text {
+    margin-bottom: 109px;
+  }
+
+  &__links {
+    display: flex;
+    flex-direction: column;
+    gap: 23px;
+  }
+
+  &__link {
+    color: $color-primary;
+  }
+}
