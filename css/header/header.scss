@@ -127,12 +127,7 @@
 
 @media only screen and (max-width: 767.98px) {
   .header {
-    &__logo {
-      height: 25px;
-    }
-    &__title {
-      font-size: 30px;
-    }
+    &__title,
     &__nav {
       display: none;
     }
@@ -142,23 +137,9 @@
     &__hamburger {
       display: block;
     }
-  }
-}
 
-@media only screen and (max-width: 575.98px) {
-  .header {
-    display: block;
-    height: 60px;
-    transition: 0.3s ease-in-out;
-
-    &__logo {
-      padding: 2px;
-    }
-  }
-
-  .menu {
     &__btn {
-      transform: translateY(13px);
+      transform: translateY(-0.5px);
     }
   }
 }
