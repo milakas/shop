@@ -3,30 +3,23 @@
 /* Footer */
 
 .footer {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-column-gap: 16px;
+  grid-row-gap: 8px;
   padding: 24px 16px 12px;
   color: $color-secondary;
 
-  &__container {
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-  }
-
   &__container-logo {
-    flex: 1 0 25%;
-    padding: 0 10px;
+    grid-column: 1 / span 2;
   }
 
   &__logo {
-    margin: 0 0 30px;
+    max-width: 100%;
   }
 
   &__container-title-link {
-    flex: 1 10 25%;
-    width: auto;
-    padding: 0 10px;
+    grid-column: 4 / span 2;
   }
 
   &__title {
@@ -34,8 +27,11 @@
     flex-direction: column;
     margin-bottom: 41px;
     gap: 8px;
+  }
+
+  &__shop {
     font-size: 32px;
-    line-height: 29px;
+    color: inherit;
   }
 
   &__links {
@@ -47,24 +43,19 @@
 
   &__link {
     font-size: 24px;
-    line-height: 28px;
     color: $color-secondary;
   }
 
   &__info {
+    grid-column: 7 / span 2;
     display: flex;
-    flex: 1 0 20%;
-    min-width: 150px;
     flex-direction: column;
-    width: auto;
     margin-bottom: 39px;
-    padding: 0 10px;
     gap: 7px;
   }
 
   &__info-link {
     font-size: 16px;
-    line-height: 18.75px;
     color: $color-secondary;
   }
 
@@ -73,41 +64,20 @@
   }
 
   &__newsletter {
-    flex: 1 0 30%;
-    width: auto;
-    padding: 0 10px;
+    grid-column: 9 / span 4;
   }
 
   &__newsletter-title {
     margin-bottom: 58px;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 20px;
   }
 
   &__sign {
     margin-bottom: 85px;
+    font-size: 13px;
   }
 
   &__socials {
     margin-bottom: 18px;
-  }
-}
-
-/* Checkbox */
-
-.sign {
-  &__input {
-    cursor: pointer;
-    transform: translateY(2px);
-  }
-
-  &__label {
-    font-size: 14px;
-  }
-
-  &__link {
-    color: $color-secondary;
   }
 }
 
@@ -137,10 +107,17 @@
   }
 }
 
-@media (max-width: 767.98px) {
+@media only screen and (max-width: 991.98px) {
   .footer {
-    &__container {
-      display: block;
+    display: flex;
+    flex-direction: column;
+
+    &__container-logo {
+      display: none;
+    }
+
+    &__newsletter {
+      display: none;
     }
   }
 }
