@@ -4,45 +4,35 @@
 
 .nature {
   display: flex;
+  padding-bottom: 63px;
   background-color: $color-bg-primary;
   color: $color-bg-secondary;
-  padding-bottom: 63px;
 
   &__container {
     display: flex;
     justify-content: center;
-    align-items: center;
     width: 50%;
-    padding: 25px 18px;
+    padding: 63px 25px 25px;
   }
 
   &__text-container {
     width: 376px;
-    padding: 63px 0 0;
   }
 
   &__subtitle {
-    margin: 0 0 18px 0;
+    margin-bottom: 18px;
     font-size: 13px;
-    font-weight: 400;
     text-transform: uppercase;
   }
 
   &__title {
-    margin: 0 0 30px 0;
+    margin-bottom: 30px;
     font-size: 48px;
   }
 
   &__img {
     width: 50%;
-  }
-}
-
-@media only screen and (max-width: 767.98px) {
-  .nature {
-    &__img {
-      object-fit: cover;
-    }
+    object-fit: cover;
   }
 }
 
@@ -61,8 +51,6 @@
 
     &__img {
       width: 100%;
-      height: 500px;
-      object-fit: cover;
     }
   }
 }
