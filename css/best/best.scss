@@ -3,20 +3,24 @@
 /* Best Section */
 
 .best {
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-column-gap: 16px;
+  }
   &__title {
-    margin: 28px 0 30px 115px;
-    font-size: 1.5rem;
-    line-height: 28.13px;
-    color: $color-secondary;
+    grid-column: 2 / span 10;
+    margin: 28px 0;
+    font-size: 24px;
   }
 
   &__product-cards {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    gap: 16px;
-    padding-left: 16px;
-    padding-right: 16px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 16px;
+    grid-row-gap: 8px;
+    margin: 0 16px 16px;
+    border-bottom: 1px solid $color-secondary;
   }
 
   &__image {
@@ -38,30 +42,18 @@
     align-items: center;
   }
 
-  &__name {
-    line-height: 18.75px;
-  }
-
-  &__prise {
-    line-height: 24.32px;
-  }
-
   &__text-made {
     font-size: 13px;
-    line-height: 19.76px;
   }
 
   &__sizes {
     display: flex;
-    padding: 0;
-    margin: 0;
     gap: 6px;
     list-style: none;
   }
 
   &__size {
     font-size: 13px;
-    line-height: 20px;
     text-align: center;
     text-transform: uppercase;
     color: $color-secondary;
@@ -70,11 +62,16 @@
   &__size_not-available {
     color: $color-size-not-available;
   }
+}
 
-  &__horizontal-rule {
-    height: 0;
-    margin: 0 16px 14.61px;
-    border: none;
-    border-top: 1px solid $color-secondary;
+@media only screen and (max-width: 991.98px) {
+  .best {
+    &__product-cards {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    &__title {
+      font-size: 20px;
+    }
   }
 }
