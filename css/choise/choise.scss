@@ -1,0 +1,60 @@
+@import "../variables/variables";
+
+/* Choise Section*/
+
+.choise {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  color: $color-bg-secondary;
+
+  &__container {
+    grid-column: auto / span 6;
+  }
+
+  &__link {
+    display: block;
+    overflow: auto;
+    color: inherit;
+  }
+
+  &__img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 798px;
+    font-size: 36px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  &__img-women {
+    background-image: url(../../images/shop_w.png);
+  }
+
+  &__img-men {
+    background-image: url(../../images/shop_m.png);
+  }
+
+  &__title {
+    font-size: 36px;
+    color: inherit;
+  }
+}
+
+@media only screen and (max-width: 767.98px) {
+  .choise {
+    &__title {
+      font-size: 30px;
+      transition: 0.3s ease-in-out;
+    }
+
+    &__container {
+      grid-column: auto / span 12;
+    }
+
+    &__img {
+      height: 600px;
+    }
+  }
+}

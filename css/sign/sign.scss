@@ -1,0 +1,112 @@
+@import "../variables/variables";
+/* Sign Section */
+
+.sign {
+  display: flex;
+  padding: 64px 15px 81px;
+  line-height: 1.3;
+  text-transform: uppercase;
+  color: $color-secondary;
+  background-color: $color-bg-secondary;
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+  }
+
+  &__text {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 13px;
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+    gap: 16px;
+    margin-bottom: 19px;
+  }
+
+  &__email {
+    padding: 5px;
+    outline: 1px solid rgba($color-secondary, 0.5);
+  }
+  &__email::placeholder {
+    font-size: 70%;
+    color: rgba ($color-secondary, 0.5);
+  }
+
+  &__email:focus {
+    border-bottom: none;
+    outline: 1px solid $color-secondary;
+    transition: outline 0.3s, border-bottom 0.3s;
+  }
+
+  &__btn {
+    padding: 5px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  &__btn:active,
+  &__btn:hover {
+    background-color: rgba($color-secondary, 0.1);
+    transition: background-color 0.3s;
+  }
+
+  &__link {
+    color: inherit;
+    font-size: inherit;
+  }
+
+  &__checkbox {
+    font-size: 11px;
+  }
+
+  &__label {
+    position: relative;
+    padding-left: 25px;
+    font-size: inherit;
+    cursor: pointer;
+  }
+
+  &__input {
+    position: absolute;
+    opacity: 0;
+  }
+
+  &__ckeckbox--checked {
+    position: absolute;
+    left: 0px;
+  }
+
+  &__ckeckbox--checked::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 15px;
+    height: 15px;
+    border: 1px solid $color-secondary;
+    background-color: transparent;
+  }
+
+  &__ckeckbox--checked::after {
+    content: "\2713";
+    position: absolute;
+    left: 3px;
+    opacity: 0;
+  }
+
+  &__input:checked + &__ckeckbox--checked::after {
+    opacity: 1;
+  }
+}
+
+@media only screen and (max-width: 575.98px) {
+}

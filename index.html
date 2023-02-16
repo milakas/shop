@@ -67,7 +67,9 @@
 
     <!-- Best Section -->
     <section class="best">
-      <h2 class="best__title">O.A.D. Best Selling knitwear</h2>
+      <div class="best__container">
+        <h2 class="best__title">O.A.D. Best Selling knitwear</h2>
+      </div>
       <div class="best__product-cards">
         <div class="best__card">
           <img class="best__image" src="images/nord.jpg" alt="Nord">
@@ -157,14 +159,52 @@
       <hr class="best__horizontal-rule">
 
     </section>
+    <section class="choise">
+      <div class="choise__container">
+        <a href="#" class="choise__link link">
+          <div class="choise__img choise__img-women">
+            <h3 class="choise__title">Shop Women</h3>
+          </div>
+        </a>
+      </div>
+      <div class="choise__container">
+        <a href="#" class="choise__link link">
+          <div class="choise__img choise__img-men">
+            <h3 class="choise__title">Shop Men</h3>
+          </div>
+        </a>
+      </div>
+    </section>
 
+    <!-- Sign Section -->
+    <section class="sign">
+      <form class="sign__form">
+        <p class="sign__text">
+          Get 10% off on your next online order.
+          <br>
+          Join our newsletter to receive updates on O.A.D. collections, events and new arrivals.
+        </p>
+        <div class="sign__wrapper">
+          <input class="sign__email" type="email" placeholder="ENTER YOUR EMAIL">
+          <button class="sign__btn" type="submit">SIGN UP</button>
+        </div>
+        <div class="sign__checkbox">
+          <label class="sign__label" for="accept">
+            <input class="sign__input" type="checkbox" id="accept" name="email" required>
+            <span class="sign__ckeckbox--checked"></span>
+            I accept the
+            <a class="link sign__link" href="#">O.A.D. privacy policy.</a>
+          </label>
+        </div>
+      </form>
+    </section>
 
     <!-- Wool Section -->
     <section class="wool wool__bg-image">
       <div class="wool__content">
-        <h1 class="wool__heading">
+        <h2 class="wool__heading">
           A Legacy of Wool Since 1853
-        </h1>
+        </h2>
         <p class="wool__text">
           Using our knowledge, rooted in our Devold heritage, we continue the tradition of
           mastering wool.
@@ -192,8 +232,8 @@
       </div>
       <div class="footer__container-title-link">
         <div class="footer__title">
-          <h3>Men</h3>
-          <h3>Women</h3>
+          <a class="link footer__shop" href="#">Men</a>
+          <a class="link footer__shop" href="#">Women</a>
         </div>
         <nav class="footer__links">
           <a class="footer__link link" href="#">Our Heritage</a>
@@ -223,8 +263,9 @@
 
         <!-- Checkbox -->
         <div class="footer__sign sign__checkbox">
-          <input class="sign__input" type="checkbox" id="accept" required>
-          <label class="sign__label" for="accept">
+          <label class="sign__label" for="accept-footer">
+            <input class="sign__input" type="checkbox" id="accept-footer" required>
+            <span class="sign__ckeckbox--checked"></span>
             I accept the
             <a class="link sign__link" href="#">O.A.D. privacy policy.</a>
           </label>
@@ -238,10 +279,6 @@
       </div>
     </div>
   </footer>
-
-
-
-
 </body>
 
 </html>

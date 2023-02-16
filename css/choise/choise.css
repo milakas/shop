@@ -1,0 +1,47 @@
+/* Choise Section*/
+.choise {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  color: #ebecdc;
+}
+.choise__container {
+  grid-column: auto/span 6;
+}
+.choise__link {
+  display: block;
+  overflow: auto;
+  color: inherit;
+}
+.choise__img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 798px;
+  font-size: 36px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.choise__img-women {
+  background-image: url(../../images/shop_w.png);
+}
+.choise__img-men {
+  background-image: url(../../images/shop_m.png);
+}
+.choise__title {
+  font-size: 36px;
+  color: inherit;
+}
+
+@media only screen and (max-width: 767.98px) {
+  .choise__title {
+    font-size: 30px;
+    transition: 0.3s ease-in-out;
+  }
+  .choise__container {
+    grid-column: auto/span 12;
+  }
+  .choise__img {
+    height: 600px;
+  }
+}/*# sourceMappingURL=choise.css.map */
