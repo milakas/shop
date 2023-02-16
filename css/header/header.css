@@ -2,13 +2,15 @@
 .header {
   position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
+  z-index: 3;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 25px 18px;
   width: 100%;
   background-color: #6889a5;
-  filter: drop-shadow(0 0 3px rgba(45, 30, 30, 0.1960784314));
 }
 .header__title {
   font-size: 32px;
@@ -35,7 +37,7 @@
 .menu__btn {
   display: flex;
   align-items: center;
-  position: fixed;
+  position: absolute;
   top: 25px;
   right: 25px;
   width: 26px;

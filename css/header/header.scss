@@ -5,13 +5,15 @@
 .header {
   position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
+  z-index: 3;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 25px 18px;
   width: 100%;
   background-color: $color-bg-primary;
-  filter: drop-shadow(0 0 3px #2d1e1e32);
 
   &__title {
     font-size: 32px;
@@ -42,7 +44,7 @@
   &__btn {
     display: flex;
     align-items: center;
-    position: fixed;
+    position: absolute;
     top: 25px;
     right: 25px;
     width: 26px;
