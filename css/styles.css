@@ -22,10 +22,6 @@
   filter: brightness(85%);
 }
 
-main {
-  margin-top: 80px;
-}
-
 input,
 button {
   outline: none;
@@ -164,6 +160,7 @@ button {
 /* Nature Section */
 .nature {
   display: flex;
+  padding-top: 80px;
   padding-bottom: 63px;
   background-color: #6889a5;
   color: #ebecdc;
@@ -547,8 +544,5 @@ button {
   }
   .footer__newsletter {
     display: none;
-  }
-  .footer__socials {
-    display: block;
   }
 }/*# sourceMappingURL=styles.css.map */

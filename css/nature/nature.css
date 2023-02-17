@@ -1,6 +1,7 @@
 /* Nature Section */
 .nature {
   display: flex;
+  padding-top: 80px;
   padding-bottom: 63px;
   background-color: #6889a5;
   color: #ebecdc;
