@@ -482,6 +482,11 @@ button {
   color: #2d1e1e;
   background-color: #ebecdc;
 }
+@media only screen and (max-width: 575.98px) {
+  .sign {
+    padding: 40px 15px;
+  }
+}
 .sign__form {
   display: flex;
   flex-direction: column;
@@ -493,25 +498,51 @@ button {
   margin-bottom: 40px;
   font-size: 13px;
 }
+@media only screen and (max-width: 575.98px) {
+  .sign__text {
+    margin-bottom: 25px;
+  }
+}
 .sign__wrapper {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   height: 30px;
   gap: 16px;
   margin-bottom: 19px;
 }
+@media only screen and (max-width: 575.98px) {
+  .sign__wrapper {
+    gap: 8px;
+  }
+}
 .sign__email {
   padding: 5px;
+  font-size: 14px;
   outline: 1px solid rgba(45, 30, 30, 0.5);
+}
+@media only screen and (max-width: 575.98px) {
+  .sign__email {
+    max-width: 45%;
+    font-size: 12px;
+  }
 }
 .sign__email::-moz-placeholder {
   font-size: 70%;
-  color: rgba #2d1e1e, 0.5;
+  color: rgba(45, 30, 30, 0.5);
 }
 .sign__email::placeholder {
   font-size: 70%;
-  color: rgba #2d1e1e, 0.5;
+  color: rgba(45, 30, 30, 0.5);
+}
+@media only screen and (max-width: 575.98px) {
+  .sign__email::-moz-placeholder {
+    font-size: 60%;
+  }
+  .sign__email::placeholder {
+    font-size: 60%;
+  }
 }
 .sign__email:focus {
   border-bottom: none;
@@ -524,6 +555,11 @@ button {
   border-radius: 5px;
   cursor: pointer;
 }
+@media only screen and (max-width: 575.98px) {
+  .sign__btn {
+    font-size: 12px;
+  }
+}
 .sign__btn:active, .sign__btn:hover {
   background-color: rgba(45, 30, 30, 0.1);
   transition: background-color 0.3s;
@@ -535,11 +571,21 @@ button {
 .sign__checkbox {
   font-size: 11px;
 }
+@media only screen and (max-width: 575.98px) {
+  .sign__checkbox {
+    font-size: 9px;
+  }
+}
 .sign__label {
   position: relative;
   padding-left: 25px;
   font-size: inherit;
   cursor: pointer;
+}
+@media only screen and (max-width: 575.98px) {
+  .sign__label {
+    padding-left: 20px;
+  }
 }
 .sign__input {
   position: absolute;
@@ -558,6 +604,12 @@ button {
   height: 15px;
   border: 1px solid #2d1e1e;
   background-color: transparent;
+}
+@media only screen and (max-width: 575.98px) {
+  .sign__ckeckbox--checked::before {
+    width: 10px;
+    height: 10px;
+  }
 }
 .sign__ckeckbox--checked::after {
   content: "✓";
@@ -584,6 +636,12 @@ button {
   margin-left: auto;
   padding: 0 15px;
   color: #fff;
+}
+@media only screen and (max-width: 575.98px) {
+  .wool__content {
+    width: auto;
+    margin-left: 0;
+  }
 }
 .wool__heading {
   margin-bottom: 51px;
