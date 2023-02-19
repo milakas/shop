@@ -40,34 +40,89 @@ button {
   left: 0;
   right: 0;
   z-index: 3;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   padding: 25px 18px;
-  width: 100%;
   background-color: #6889a5;
+}
+@media only screen and (max-width: 575.98px) {
+  .header {
+    padding-top: 18px;
+    padding-bottom: 18px;
+    transition: 0.3s ease-in;
+  }
+}
+.header__container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  align-items: center;
+  -moz-column-gap: 16px;
+       column-gap: 16px;
+  row-gap: 8px;
+  width: 100%;
+}
+@media only screen and (max-width: 991.98px) {
+  .header__container {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+.header__logo {
+  max-width: 100%;
+  grid-column: 1/span 2;
+}
+@media only screen and (max-width: 575.98px) {
+  .header__logo {
+    grid-column: 1/span 3;
+    height: 70%;
+  }
+}
+.header__titles {
+  grid-column: 4/span 3;
+  display: flex;
+  flex-wrap: wrap;
+}
+@media only screen and (max-width: 991.98px) {
+  .header__titles {
+    display: none;
+  }
 }
 .header__title {
   font-size: 32px;
   color: #fff;
 }
+.header__title:not(:last-child) {
+  margin-right: 16px;
+}
 .header__nav {
-  gap: 16px;
+  grid-column: 7/span 5;
 }
 
 /* NavBar */
 .nav {
   display: flex;
+  flex-wrap: wrap;
+}
+@media only screen and (max-width: 991.98px) {
+  .nav {
+    display: none;
+  }
 }
 .nav__link {
   font-size: 13px;
+  line-height: 170%;
   text-transform: uppercase;
   color: #fff;
+}
+.nav__link:not(:last-child) {
+  margin-right: 17px;
 }
 
 /* Hamburger */
 .menu__hamburger {
   display: none;
+}
+@media only screen and (max-width: 991.98px) {
+  .menu__hamburger {
+    display: block;
+  }
 }
 .menu__btn {
   display: flex;
@@ -77,9 +132,14 @@ button {
   right: 25px;
   width: 26px;
   height: 26px;
-  transform: translateY(7px);
   cursor: pointer;
   z-index: 1;
+}
+@media only screen and (max-width: 575.98px) {
+  .menu__btn {
+    top: 18px;
+    transition: 0.3s ease-in;
+  }
 }
 .menu__btn > span, .menu__btn > span::before, .menu__btn > span::after {
   display: block;
@@ -161,88 +221,190 @@ button {
 }
 /* Nature Section */
 .nature {
-  display: flex;
   padding-top: 80px;
-  padding-bottom: 63px;
   background-color: #6889a5;
   color: #ebecdc;
 }
+@media only screen and (max-width: 575.98px) {
+  .nature {
+    padding-top: 62px;
+  }
+}
 .nature__container {
   display: flex;
-  justify-content: center;
-  width: 50%;
-  padding: 63px 25px 25px;
+}
+@media only screen and (max-width: 575.98px) {
+  .nature__container {
+    flex-direction: column-reverse;
+    transition: 0.3s ease-in-out;
+  }
 }
 .nature__text-container {
-  width: 376px;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-auto-rows: min-content;
+  padding: 63px 18px;
+  width: 50%;
+}
+@media only screen and (max-width: 575.98px) {
+  .nature__text-container {
+    display: block;
+    padding-top: 40px;
+    text-align: center;
+    width: 100%;
+  }
+}
+.nature__subtitle, .nature__title, .nature__text {
+  grid-column: 2/span 4;
+}
+@media only screen and (max-width: 991.98px) {
+  .nature__subtitle, .nature__title, .nature__text {
+    grid-column: auto/span 6;
+    transition: 0.3s ease-in-out;
+  }
 }
 .nature__subtitle {
   margin-bottom: 18px;
   font-size: 13px;
   text-transform: uppercase;
 }
+@media only screen and (max-width: 575.98px) {
+  .nature__subtitle {
+    font-size: 9px;
+    margin-bottom: 13px;
+    transition: 0.3s ease-in-out;
+  }
+}
 .nature__title {
   margin-bottom: 30px;
   font-size: 48px;
+  line-height: 57.6px;
+}
+@media only screen and (max-width: 575.98px) {
+  .nature__title {
+    font-size: 30px;
+    transition: 0.3s ease-in-out;
+  }
+}
+.nature__text {
+  line-height: 19.84px;
+}
+@media only screen and (max-width: 575.98px) {
+  .nature__text {
+    font-size: 14px;
+    text-align: justify;
+    transition: 0.3s ease-in-out;
+  }
 }
 .nature__img {
   width: 50%;
+  max-height: 900px;
   -o-object-fit: cover;
      object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
 }
-
 @media only screen and (max-width: 575.98px) {
-  .nature {
-    flex-direction: column;
-  }
-  .nature__container {
-    width: 100%;
-    text-align: center;
-  }
-  .nature__text {
-    text-align: justify;
-  }
   .nature__img {
     width: 100%;
+    height: 500px;
+    -o-object-position: top;
+       object-position: top;
+    transition: 0.3s ease-in-out;
   }
 }
+
 /* Best Section */
 .best__container {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-column-gap: 16px;
+  padding: 28px 18px;
 }
 .best__title {
   grid-column: 2/span 10;
-  margin: 28px 0;
   font-size: 24px;
+}
+@media only screen and (max-width: 575.98px) {
+  .best__title {
+    grid-column: auto/span 12;
+    font-size: 18px;
+    transition: 0.3s ease-in-out;
+  }
 }
 .best__product-cards {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(12, 1fr);
   grid-column-gap: 16px;
   grid-row-gap: 8px;
   margin: 0 16px 16px;
   border-bottom: 1px solid #2d1e1e;
 }
+.best__card {
+  grid-column: auto/span 3;
+}
+@media only screen and (max-width: 991.98px) {
+  .best__card {
+    grid-column: auto/span 4;
+  }
+}
+@media only screen and (max-width: 767.98px) {
+  .best__card {
+    grid-column: auto/span 6;
+  }
+}
 .best__image {
   margin-bottom: 15px;
   width: 100%;
+}
+@media only screen and (max-width: 575.98px) {
+  .best__image {
+    margin-bottom: 10px;
+  }
 }
 .best__text {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  min-height: 190px;
+  max-height: 190px;
   margin-bottom: 8.39px;
+}
+@media only screen and (max-width: 575.98px) {
+  .best__text {
+    justify-content: flex-start;
+    gap: 8px;
+  }
 }
 .best__text-top {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+@media only screen and (max-width: 575.98px) {
+  .best__text-top {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+}
+@media only screen and (max-width: 575.98px) {
+  .best__name {
+    font-size: 14px;
+    line-height: 2;
+  }
+}
+@media only screen and (max-width: 575.98px) {
+  .best__price {
+    font-size: 12px;
+  }
+}
 .best__text-made {
   font-size: 13px;
+}
+@media only screen and (max-width: 575.98px) {
+  .best__text-made {
+    display: none;
+  }
 }
 .best__sizes {
   display: flex;
@@ -255,18 +417,12 @@ button {
   text-transform: uppercase;
   color: #2d1e1e;
 }
-.best__size_not-available {
-  color: #cac7b8;
+@media only screen and (max-width: 575.98px) {
+  .best__size {
+    font-size: 10px;
+  }
 }
 
-@media only screen and (max-width: 991.98px) {
-  .best__product-cards {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .best__title {
-    font-size: 20px;
-  }
-}
 /* Choise Section*/
 .choise {
   display: grid;
@@ -326,6 +482,11 @@ button {
   color: #2d1e1e;
   background-color: #ebecdc;
 }
+@media only screen and (max-width: 575.98px) {
+  .sign {
+    padding: 40px 15px;
+  }
+}
 .sign__form {
   display: flex;
   flex-direction: column;
@@ -337,25 +498,51 @@ button {
   margin-bottom: 40px;
   font-size: 13px;
 }
+@media only screen and (max-width: 575.98px) {
+  .sign__text {
+    margin-bottom: 25px;
+  }
+}
 .sign__wrapper {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   height: 30px;
   gap: 16px;
   margin-bottom: 19px;
 }
+@media only screen and (max-width: 575.98px) {
+  .sign__wrapper {
+    gap: 8px;
+  }
+}
 .sign__email {
   padding: 5px;
+  font-size: 14px;
   outline: 1px solid rgba(45, 30, 30, 0.5);
+}
+@media only screen and (max-width: 575.98px) {
+  .sign__email {
+    max-width: 45%;
+    font-size: 12px;
+  }
 }
 .sign__email::-moz-placeholder {
   font-size: 70%;
-  color: rgba #2d1e1e, 0.5;
+  color: rgba(45, 30, 30, 0.5);
 }
 .sign__email::placeholder {
   font-size: 70%;
-  color: rgba #2d1e1e, 0.5;
+  color: rgba(45, 30, 30, 0.5);
+}
+@media only screen and (max-width: 575.98px) {
+  .sign__email::-moz-placeholder {
+    font-size: 60%;
+  }
+  .sign__email::placeholder {
+    font-size: 60%;
+  }
 }
 .sign__email:focus {
   border-bottom: none;
@@ -368,6 +555,11 @@ button {
   border-radius: 5px;
   cursor: pointer;
 }
+@media only screen and (max-width: 575.98px) {
+  .sign__btn {
+    font-size: 12px;
+  }
+}
 .sign__btn:active, .sign__btn:hover {
   background-color: rgba(45, 30, 30, 0.1);
   transition: background-color 0.3s;
@@ -379,11 +571,21 @@ button {
 .sign__checkbox {
   font-size: 11px;
 }
+@media only screen and (max-width: 575.98px) {
+  .sign__checkbox {
+    font-size: 9px;
+  }
+}
 .sign__label {
   position: relative;
   padding-left: 25px;
   font-size: inherit;
   cursor: pointer;
+}
+@media only screen and (max-width: 575.98px) {
+  .sign__label {
+    padding-left: 20px;
+  }
 }
 .sign__input {
   position: absolute;
@@ -402,6 +604,12 @@ button {
   height: 15px;
   border: 1px solid #2d1e1e;
   background-color: transparent;
+}
+@media only screen and (max-width: 575.98px) {
+  .sign__ckeckbox--checked::before {
+    width: 10px;
+    height: 10px;
+  }
 }
 .sign__ckeckbox--checked::after {
   content: "✓";
@@ -428,6 +636,12 @@ button {
   margin-left: auto;
   padding: 0 15px;
   color: #fff;
+}
+@media only screen and (max-width: 575.98px) {
+  .wool__content {
+    width: auto;
+    margin-left: 0;
+  }
 }
 .wool__heading {
   margin-bottom: 51px;

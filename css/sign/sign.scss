@@ -8,6 +8,9 @@
   text-transform: uppercase;
   color: $color-secondary;
   background-color: $color-bg-secondary;
+  @media only screen and (max-width: 575.98px) {
+    padding: 40px 15px;
+  }
 
   &__form {
     display: flex;
@@ -20,24 +23,40 @@
     text-align: center;
     margin-bottom: 40px;
     font-size: 13px;
+    @media only screen and (max-width: 575.98px) {
+      margin-bottom: 25px;
+    }
   }
 
   &__wrapper {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     height: 30px;
     gap: 16px;
     margin-bottom: 19px;
+    @media only screen and (max-width: 575.98px) {
+      gap: 8px;
+    }
   }
 
   &__email {
     padding: 5px;
+    font-size: 14px;
     outline: 1px solid rgba($color-secondary, 0.5);
+    @media only screen and (max-width: 575.98px) {
+      max-width: 45%;
+      font-size: 12px;
+    }
   }
+
   &__email::placeholder {
     font-size: 70%;
-    color: rgba ($color-secondary, 0.5);
+    color: rgba($color-secondary, 0.5);
+    @media only screen and (max-width: 575.98px) {
+      font-size: 60%;
+    }
   }
 
   &__email:focus {
@@ -51,6 +70,9 @@
     font-size: 16px;
     border-radius: 5px;
     cursor: pointer;
+    @media only screen and (max-width: 575.98px) {
+      font-size: 12px;
+    }
   }
 
   &__btn:active,
@@ -66,6 +88,9 @@
 
   &__checkbox {
     font-size: 11px;
+    @media only screen and (max-width: 575.98px) {
+      font-size: 9px;
+    }
   }
 
   &__label {
@@ -73,6 +98,9 @@
     padding-left: 25px;
     font-size: inherit;
     cursor: pointer;
+    @media only screen and (max-width: 575.98px) {
+      padding-left: 20px;
+    }
   }
 
   &__input {
@@ -94,6 +122,10 @@
     height: 15px;
     border: 1px solid $color-secondary;
     background-color: transparent;
+    @media only screen and (max-width: 575.98px) {
+      width: 10px;
+      height: 10px;
+    }
   }
 
   &__ckeckbox--checked::after {

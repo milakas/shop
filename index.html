@@ -16,36 +16,40 @@
 <body>
 
   <!-- Header -->
-  <header class="header header_fixed">
-    <img class="logo header__logo" src="images/logo-light.svg" alt="logo">
-    <h2 class="title header__title">Women Men</h2>
-    <!-- Nav Bar -->
-    <nav class="nav header__nav">
-      <a class="nav__link link" href="#">Our Heritage</a>
-      <a class="nav__link link" href="#">Care</a>
-      <a class="nav__link link" href="#">Collections</a>
-      <a class="nav__link link" href="#">Responsibility</a>
-    </nav>
+  <header class="header" id="header">
+    <div class="header__container">
+      <img class="logo header__logo" src="images/logo-light.svg" alt="logo">
+      <div class="header__titles">
+        <div class="header__title">Women</div>
+        <div class="header__title">Men</div>
+      </div>
+      <!-- Nav Bar -->
+      <nav class="nav header__nav">
+        <a class="nav__link link" href="#nature">Our Heritage</a>
+        <a class="nav__link link" href="#best">Care</a>
+        <a class="nav__link link" href="#choise">Collections</a>
+        <a class="nav__link link" href="#sign">Responsibility</a>
+      </nav>
 
-    <div class="menu__hamburger">
-      <input id="menu__toggle" type="checkbox" />
-      <label class="menu__btn" for="menu__toggle">
-        <span></span>
-      </label>
+      <div class="menu__hamburger">
+        <input id="menu__toggle" type="checkbox" />
+        <label class="menu__btn" for="menu__toggle">
+          <span></span>
+        </label>
 
-      <ul class="menu__box">
-        <li><a class="menu__item link" href="#">Our Heritage</a></li>
-        <li><a class="menu__item link" href="#">Care</a></li>
-        <li><a class="menu__item link" href="#">Collections</a></li>
-        <li><a class="menu__item link" href="#">Responsibility</a></li>
-      </ul>
+        <ul class="menu__box">
+          <li><a class="menu__item link" href="#">Our Heritage</a></li>
+          <li><a class="menu__item link" href="#">Care</a></li>
+          <li><a class="menu__item link" href="#">Collections</a></li>
+          <li><a class="menu__item link" href="#">Responsibility</a></li>
+        </ul>
+      </div>
     </div>
-
   </header>
 
   <main>
     <!-- Nature Section -->
-    <section class="nature">
+    <section class="nature" id="nature">
       <div class="nature__container">
         <div class="nature__text-container">
           <h4 class="nature__subtitle">FW22 collection</h4>
@@ -61,12 +65,12 @@
             on – a legacy for times to come.
           </p>
         </div>
+        <img class="nature__img" src="images/nature.jpg" alt="nature-img">
       </div>
-      <img class="nature__img" src="images/nature.jpg" alt="nature-img">
     </section>
 
     <!-- Best Section -->
-    <section class="best">
+    <section class="best" id="best">
       <div class="best__container">
         <h2 class="best__title">O.A.D. Best Selling knitwear</h2>
       </div>
@@ -76,7 +80,7 @@
           <div class="best__text">
             <div class="best__text-top">
               <h3 class="best__name">Nord</h3>
-              <span class="best__prise">500 EUR</span>
+              <span class="best__price">500 EUR</span>
             </div>
             <div class="best__text-made">
               MADE OF <br>
@@ -96,7 +100,7 @@
           <div class="best__text">
             <div class="best__text-top">
               <h3 class="best__name">Ole No. 1</h3>
-              <span class="best__prise">820 EUR</span>
+              <span class="best__price">820 EUR</span>
             </div>
             <div class="best__text-made">
               MADE OF <br>
@@ -118,7 +122,7 @@
           <div class="best__text">
             <div class="best__text-top">
               <h3 class="best__name">Ole No. 2</h3>
-              <span class="best__prise">820 EUR</span>
+              <span class="best__price">820 EUR</span>
             </div>
             <div class="best__text-made">
               MADE OF <br>
@@ -140,7 +144,7 @@
           <div class="best__text">
             <div class="best__text-top">
               <h3 class="best__name">Blaatroie No. 4</h3>
-              <span class="best__prise">500 EUR</span>
+              <span class="best__price">500 EUR</span>
             </div>
             <div class="best__text-made">
               MADE OF <br>
@@ -159,7 +163,7 @@
       <hr class="best__horizontal-rule">
 
     </section>
-    <section class="choise">
+    <section class="choise" id="choise">
       <div class="choise__container">
         <a href="#" class="choise__link link">
           <div class="choise__img choise__img-women">
@@ -177,7 +181,7 @@
     </section>
 
     <!-- Sign Section -->
-    <section class="sign">
+    <section class="sign" id="sign">
       <form class="sign__form">
         <p class="sign__text">
           Get 10% off on your next online order.
@@ -200,7 +204,7 @@
     </section>
 
     <!-- Wool Section -->
-    <section class="wool wool__bg-image">
+    <section class="wool wool__bg-image" id="wool">
       <div class="wool__content">
         <h2 class="wool__heading">
           A Legacy of Wool Since 1853
@@ -225,7 +229,7 @@
 
   <!-- Footer -->
 
-  <footer class="footer">
+  <footer class="footer" id="footer">
     <div class="footer__container-logo">
       <img class="logo footer__logo" src="images/logo.svg" alt="logo">
     </div>
@@ -276,7 +280,6 @@
         <a class="socials__icon socials__linkedin" href="#"></a>
       </div>
     </div>
-    <!-- </div> -->
   </footer>
 </body>
 
