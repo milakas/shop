@@ -8,31 +8,74 @@
   left: 0;
   right: 0;
   z-index: 3;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   padding: 25px 18px;
-  width: 100%;
   background-color: $color-bg-primary;
+  @media only screen and (max-width: 575.98px) {
+    padding-top: $padding-xs;
+    padding-bottom: $padding-xs;
+    transition: 0.3s ease-in;
+  }
+
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    align-items: center;
+    column-gap: 16px;
+    row-gap: 8px;
+    width: 100%;
+    @media only screen and (max-width: 991.98px) {
+      grid-template-columns: repeat(6, 1fr);
+    }
+  }
+
+  &__logo {
+    max-width: 100%;
+    grid-column: 1 / span 2;
+    @media only screen and (max-width: 575.98px) {
+      grid-column: 1 / span 3;
+      height: 70%;
+    }
+  }
+
+  &__titles {
+    grid-column: 4 / span 3;
+    display: flex;
+    flex-wrap: wrap;
+    @media only screen and (max-width: 991.98px) {
+      display: none;
+    }
+  }
 
   &__title {
     font-size: 32px;
     color: $color-primary;
+
+    &:not(:last-child) {
+      margin-right: 16px;
+    }
   }
 
   &__nav {
-    gap: 16px;
+    grid-column: 7 / span 5;
   }
 }
-
 /* NavBar */
 .nav {
   display: flex;
+  flex-wrap: wrap;
+  @media only screen and (max-width: 991.98px) {
+    display: none;
+  }
 
   &__link {
     font-size: 13px;
+    line-height: 170%;
     text-transform: uppercase;
     color: $color-primary;
+
+    &:not(:last-child) {
+      margin-right: 17px;
+    }
   }
 }
 
@@ -40,6 +83,9 @@
 .menu {
   &__hamburger {
     display: none;
+    @media only screen and (max-width: 991.98px) {
+      display: block;
+    }
   }
   &__btn {
     display: flex;
@@ -49,9 +95,13 @@
     right: 25px;
     width: 26px;
     height: 26px;
-    transform: translateY(7px);
     cursor: pointer;
     z-index: 1;
+
+    @media only screen and (max-width: 575.98px) {
+      top: $padding-xs;
+      transition: 0.3s ease-in;
+    }
   }
   // добавляем "гамбургер"
   &__btn > span,

@@ -5,34 +5,89 @@
   left: 0;
   right: 0;
   z-index: 3;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   padding: 25px 18px;
-  width: 100%;
   background-color: #6889a5;
+}
+@media only screen and (max-width: 575.98px) {
+  .header {
+    padding-top: 18px;
+    padding-bottom: 18px;
+    transition: 0.3s ease-in;
+  }
+}
+.header__container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  align-items: center;
+  -moz-column-gap: 16px;
+       column-gap: 16px;
+  row-gap: 8px;
+  width: 100%;
+}
+@media only screen and (max-width: 991.98px) {
+  .header__container {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+.header__logo {
+  max-width: 100%;
+  grid-column: 1/span 2;
+}
+@media only screen and (max-width: 575.98px) {
+  .header__logo {
+    grid-column: 1/span 3;
+    height: 70%;
+  }
+}
+.header__titles {
+  grid-column: 4/span 3;
+  display: flex;
+  flex-wrap: wrap;
+}
+@media only screen and (max-width: 991.98px) {
+  .header__titles {
+    display: none;
+  }
 }
 .header__title {
   font-size: 32px;
   color: #fff;
 }
+.header__title:not(:last-child) {
+  margin-right: 16px;
+}
 .header__nav {
-  gap: 16px;
+  grid-column: 7/span 5;
 }
 
 /* NavBar */
 .nav {
   display: flex;
+  flex-wrap: wrap;
+}
+@media only screen and (max-width: 991.98px) {
+  .nav {
+    display: none;
+  }
 }
 .nav__link {
   font-size: 13px;
+  line-height: 170%;
   text-transform: uppercase;
   color: #fff;
+}
+.nav__link:not(:last-child) {
+  margin-right: 17px;
 }
 
 /* Hamburger */
 .menu__hamburger {
   display: none;
+}
+@media only screen and (max-width: 991.98px) {
+  .menu__hamburger {
+    display: block;
+  }
 }
 .menu__btn {
   display: flex;
@@ -42,9 +97,14 @@
   right: 25px;
   width: 26px;
   height: 26px;
-  transform: translateY(7px);
   cursor: pointer;
   z-index: 1;
+}
+@media only screen and (max-width: 575.98px) {
+  .menu__btn {
+    top: 18px;
+    transition: 0.3s ease-in;
+  }
 }
 .menu__btn > span, .menu__btn > span::before, .menu__btn > span::after {
   display: block;
