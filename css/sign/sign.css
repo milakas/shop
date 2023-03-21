@@ -10,7 +10,7 @@
 }
 @media only screen and (max-width: 575.98px) {
   .sign {
-    padding: 40px 15px;
+    padding-bottom: 100px;
   }
 }
 .sign__form {
@@ -24,83 +24,55 @@
   margin-bottom: 40px;
   font-size: 13px;
 }
-@media only screen and (max-width: 575.98px) {
-  .sign__text {
-    margin-bottom: 25px;
-  }
-}
 .sign__wrapper {
+  position: relative;
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   height: 30px;
   gap: 16px;
   margin-bottom: 19px;
 }
-@media only screen and (max-width: 575.98px) {
-  .sign__wrapper {
-    gap: 8px;
-  }
-}
 .sign__email {
+  min-width: 200px;
   padding: 5px;
   font-size: 14px;
-  outline: 1px solid rgba(45, 30, 30, 0.5);
-}
-@media only screen and (max-width: 575.98px) {
-  .sign__email {
-    max-width: 45%;
-    font-size: 12px;
-  }
+  cursor: text;
+  outline: 1px solid #2d1e1e;
 }
 .sign__email::-moz-placeholder {
-  font-size: 70%;
-  color: rgba(45, 30, 30, 0.5);
+  font-size: 80%;
+  color: inherit;
 }
 .sign__email::placeholder {
-  font-size: 70%;
-  color: rgba(45, 30, 30, 0.5);
-}
-@media only screen and (max-width: 575.98px) {
-  .sign__email::-moz-placeholder {
-    font-size: 60%;
-  }
-  .sign__email::placeholder {
-    font-size: 60%;
-  }
-}
-.sign__email:focus {
-  border-bottom: none;
-  outline: 1px solid #2d1e1e;
-  transition: outline 0.3s, border-bottom 0.3s;
+  font-size: 80%;
+  color: inherit;
 }
 .sign__btn {
-  padding: 5px;
   font-size: 16px;
-  border-radius: 5px;
   cursor: pointer;
+}
+.sign__btn:hover {
+  transform: scale(1.1);
+  transition: 0.3 ease-in;
+}
+.sign__btn:focus {
+  transform: scale(0.9);
+  transition: 0.3 ease-in;
 }
 @media only screen and (max-width: 575.98px) {
   .sign__btn {
-    font-size: 12px;
+    position: absolute;
+    top: 80px;
   }
-}
-.sign__btn:active, .sign__btn:hover {
-  background-color: rgba(45, 30, 30, 0.1);
-  transition: background-color 0.3s;
 }
 .sign__link {
   color: inherit;
   font-size: inherit;
+  text-decoration: underline;
 }
 .sign__checkbox {
   font-size: 11px;
-}
-@media only screen and (max-width: 575.98px) {
-  .sign__checkbox {
-    font-size: 9px;
-  }
 }
 .sign__label {
   position: relative;
@@ -131,16 +103,12 @@
   border: 1px solid #2d1e1e;
   background-color: transparent;
 }
-@media only screen and (max-width: 575.98px) {
-  .sign__ckeckbox--checked::before {
-    width: 10px;
-    height: 10px;
-  }
-}
 .sign__ckeckbox--checked::after {
-  content: "✓";
+  content: "✔";
+  color: inherit;
   position: absolute;
-  left: 3px;
+  left: 1px;
+  top: -2px;
   opacity: 0;
 }
 .sign__input:checked + .sign__ckeckbox--checked::after {

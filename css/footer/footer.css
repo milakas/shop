@@ -4,7 +4,7 @@
   grid-template-columns: repeat(12, 1fr);
   grid-column-gap: 16px;
   grid-row-gap: 8px;
-  padding: 24px 16px 12px;
+  padding: 24px 25px 12px;
   color: #2d1e1e;
 }
 .footer__container-logo {
@@ -33,6 +33,7 @@
   gap: 10px;
 }
 .footer__link {
+  position: relative;
   font-size: 24px;
   color: #2d1e1e;
 }

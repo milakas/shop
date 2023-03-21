@@ -1,13 +1,14 @@
-@import "../variables/variables";
+@import '../variables/variables';
 
 /* Nature Section */
 
 .nature {
   padding-top: 80px;
+  padding-bottom: 63px;
   background-color: $color-bg-primary;
   color: $color-bg-secondary;
   @media only screen and (max-width: 575.98px) {
-    padding-top: calc(80px - $padding-xs);
+    // padding-top: calc(80px - $padding-xs);
   }
 
   &__container {
@@ -26,8 +27,7 @@
     width: 50%;
     @media only screen and (max-width: 575.98px) {
       display: block;
-      padding-top: 40px;
-      text-align: center;
+      text-align: left;
       width: 100%;
     }
   }
@@ -47,7 +47,6 @@
     font-size: 13px;
     text-transform: uppercase;
     @media only screen and (max-width: 575.98px) {
-      font-size: 9px;
       margin-bottom: 13px;
       transition: 0.3s ease-in-out;
     }
@@ -57,29 +56,21 @@
     margin-bottom: 30px;
     font-size: 48px;
     line-height: 57.6px;
-    @media only screen and (max-width: 575.98px) {
-      font-size: 30px;
-      transition: 0.3s ease-in-out;
-    }
   }
 
   &__text {
     line-height: 19.84px;
-    @media only screen and (max-width: 575.98px) {
-      font-size: 14px;
-      text-align: justify;
-      transition: 0.3s ease-in-out;
-    }
   }
 
   &__img {
     width: 50%;
-    max-height: 900px;
+    max-height: 800px;
     object-fit: cover;
     object-position: top;
     @media only screen and (max-width: 575.98px) {
       width: 100%;
-      height: 500px;
+      height: 300px;
+      padding: 0 $padding-xs;
       object-position: top;
       transition: 0.3s ease-in-out;
     }

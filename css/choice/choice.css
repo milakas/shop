@@ -1,19 +1,19 @@
-/* Choise Section*/
-.choise {
+/* Choice Section*/
+.choice {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   color: #ebecdc;
 }
-.choise__container {
+.choice__container {
   grid-column: auto/span 6;
   cursor: pointer;
 }
-.choise__link {
+.choice__link {
   display: block;
   overflow: auto;
   color: inherit;
 }
-.choise__img {
+.choice__img {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -24,27 +24,27 @@
   background-position: center;
   cursor: pointer;
 }
-.choise__img-women {
-  background-image: url(../../images/shop_w.png);
+.choice__img-women {
+  background-image: url(../images/shop_w.png);
 }
-.choise__img-men {
-  background-image: url(../../images/shop_m.png);
+.choice__img-men {
+  background-image: url(../images/shop_m.png);
 }
-.choise__title {
+.choice__title {
   font-size: 36px;
   color: inherit;
   cursor: pointer;
 }
 
 @media only screen and (max-width: 767.98px) {
-  .choise__title {
+  .choice__title {
     font-size: 30px;
     transition: 0.3s ease-in-out;
   }
-  .choise__container {
+  .choice__container {
     grid-column: auto/span 12;
   }
-  .choise__img {
-    height: 600px;
+  .choice__img {
+    height: 550px;
   }
-}/*# sourceMappingURL=choise.css.map */
+}/*# sourceMappingURL=choice.css.map */

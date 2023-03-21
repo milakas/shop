@@ -1,8 +1,8 @@
-@import "../variables/variables";
+@import '../variables/variables';
 
-/* Choise Section*/
+/* Choice Section*/
 
-.choise {
+.choice {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   color: $color-bg-secondary;
@@ -31,11 +31,11 @@
   }
 
   &__img-women {
-    background-image: url(../../images/shop_w.png);
+    background-image: url(../images/shop_w.png);
   }
 
   &__img-men {
-    background-image: url(../../images/shop_m.png);
+    background-image: url(../images/shop_m.png);
   }
 
   &__title {
@@ -46,7 +46,7 @@
 }
 
 @media only screen and (max-width: 767.98px) {
-  .choise {
+  .choice {
     &__title {
       font-size: 30px;
       transition: 0.3s ease-in-out;
@@ -57,7 +57,7 @@
     }
 
     &__img {
-      height: 600px;
+      height: 550px;
     }
   }
 }

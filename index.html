@@ -18,7 +18,9 @@
   <!-- Header -->
   <header class="header" id="header">
     <div class="header__container">
-      <img class="logo header__logo" src="images/logo-light.svg" alt="logo">
+      <a class="header__logo" href="/">
+        <img class="logo header__logo" src="images/logo-light.svg" alt="logo">
+      </a>
       <div class="header__titles">
         <div class="header__title">Women</div>
         <div class="header__title">Men</div>
@@ -33,17 +35,30 @@
 
       <div class="menu__hamburger">
         <input id="menu__toggle" type="checkbox" />
-        <label class="menu__btn" for="menu__toggle">
-          <span></span>
+        <label class="menu__btn link" for="menu__toggle">
+          <span class="link"></span>
         </label>
 
-        <ul class="menu__box">
-          <li><a class="menu__item link" href="#">Our Heritage</a></li>
-          <li><a class="menu__item link" href="#">Care</a></li>
-          <li><a class="menu__item link" href="#">Collections</a></li>
-          <li><a class="menu__item link" href="#">Responsibility</a></li>
-        </ul>
+        <div class="menu__box">
+          <div class="footer__container-title-link">
+            <div class="footer__title">
+              <a class="menu__item link footer__shop" href="#">Men</a>
+              <a class="menu__item link footer__shop" href="#">Women</a>
+            </div>
+            <nav class="footer__links">
+              <a class="menu__item footer__link link" href="#">Our Heritage</a>
+              <a class="menu__item footer__link link" href="#">Care</a>
+              <a class="menu__item footer__link link" href="#">Collections</a>
+              <a class="menu__item footer__link link" href="#">Responsibility</a>
+            </nav>
+          </div>
+        </div>
       </div>
+
+      <a class="header__basket link" href="#">
+        <img class="header__basket-svg" src="images/basket.svg" alt="basket">
+      </a>
+
     </div>
   </header>
 
@@ -75,7 +90,7 @@
         <h2 class="best__title">O.A.D. Best Selling knitwear</h2>
       </div>
       <div class="best__product-cards">
-        <div class="best__card">
+        <a class="best__card">
           <img class="best__image" src="images/nord.jpg" alt="Nord">
           <div class="best__text">
             <div class="best__text-top">
@@ -93,9 +108,9 @@
               <div class="best__size">XL</div>
             </div>
           </div>
-        </div>
+        </a>
 
-        <div class="best__card">
+        <a class="best__card">
           <img class="best__image" src="images/oleno_1.jpg" alt="Ole No. 1">
           <div class="best__text">
             <div class="best__text-top">
@@ -115,9 +130,9 @@
               <div class="best__size">L</div>
             </div>
           </div>
-        </div>
+        </a>
 
-        <div class="best__card">
+        <a href="/" class="best__card">
           <img class="best__image" src="images/oleno_2.jpg" alt="Ole No. 2">
           <div class="best__text">
             <div class="best__text-top">
@@ -137,9 +152,9 @@
               <div class=" best__size best__size_not-available">XL</div>
             </div>
           </div>
-        </div>
+        </a>
 
-        <div class="best__card">
+        <a href="/" class="best__card">
           <img class="best__image" src="images/blaatroie.jpg" alt="Blaatroie No. 4">
           <div class="best__text">
             <div class="best__text-top">
@@ -158,23 +173,22 @@
               <div class="best__size">XL</div>
             </div>
           </div>
-        </div>
+        </a>
       </div>
-      <hr class="best__horizontal-rule">
-
     </section>
-    <section class="choise" id="choise">
-      <div class="choise__container">
-        <a href="#" class="choise__link link">
-          <div class="choise__img choise__img-women">
-            <h3 class="choise__title">Shop Women</h3>
+
+    <section class="choice" id="choice">
+      <div class="choice__container">
+        <a href="#" class="choice__link link">
+          <div class="choice__img choice__img-women">
+            <h3 class="choice__title">Shop Women</h3>
           </div>
         </a>
       </div>
-      <div class="choise__container">
-        <a href="#" class="choise__link link">
-          <div class="choise__img choise__img-men">
-            <h3 class="choise__title">Shop Men</h3>
+      <div class="choice__container">
+        <a href="#" class="choice__link link">
+          <div class="choice__img choice__img-men">
+            <h3 class="choice__title">Shop Men</h3>
           </div>
         </a>
       </div>
