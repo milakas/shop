@@ -1,4 +1,4 @@
-@import "../variables/variables";
+@import '../variables/variables';
 /* Sign Section */
 
 .sign {
@@ -9,7 +9,7 @@
   color: $color-secondary;
   background-color: $color-bg-secondary;
   @media only screen and (max-width: 575.98px) {
-    padding: 40px 15px;
+    padding-bottom: 100px;
   }
 
   &__form {
@@ -23,74 +23,76 @@
     text-align: center;
     margin-bottom: 40px;
     font-size: 13px;
-    @media only screen and (max-width: 575.98px) {
-      margin-bottom: 25px;
-    }
   }
 
   &__wrapper {
+    position: relative;
     display: flex;
-    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     height: 30px;
     gap: 16px;
     margin-bottom: 19px;
-    @media only screen and (max-width: 575.98px) {
-      gap: 8px;
-    }
   }
 
   &__email {
+    min-width: 200px;
     padding: 5px;
     font-size: 14px;
-    outline: 1px solid rgba($color-secondary, 0.5);
-    @media only screen and (max-width: 575.98px) {
-      max-width: 45%;
-      font-size: 12px;
-    }
-  }
-
-  &__email::placeholder {
-    font-size: 70%;
-    color: rgba($color-secondary, 0.5);
-    @media only screen and (max-width: 575.98px) {
-      font-size: 60%;
-    }
-  }
-
-  &__email:focus {
-    border-bottom: none;
+    cursor: text;
     outline: 1px solid $color-secondary;
-    transition: outline 0.3s, border-bottom 0.3s;
+
+    &::-webkit-input-placeholder {
+      font-size: 80%;
+      color: inherit;
+    }
+
+    &::-moz-placeholder {
+      font-size: 80%;
+      color: inherit;
+    }
+
+    &:-ms-input-placeholder {
+      font-size: 80%;
+      color: inherit;
+    }
+
+    &::-ms-input-placeholder {
+      font-size: 80%;
+      color: inherit;
+    }
+
+    &::placeholder {
+      font-size: 80%;
+      color: inherit;
+    }
   }
 
   &__btn {
-    padding: 5px;
     font-size: 16px;
-    border-radius: 5px;
     cursor: pointer;
-    @media only screen and (max-width: 575.98px) {
-      font-size: 12px;
+    &:hover {
+      transform: scale(1.1);
+      transition: 0.3 ease-in;
     }
-  }
-
-  &__btn:active,
-  &__btn:hover {
-    background-color: rgba($color-secondary, 0.1);
-    transition: background-color 0.3s;
+    &:focus {
+      transform: scale(0.9);
+      transition: 0.3 ease-in;
+    }
+    @media only screen and (max-width: 575.98px) {
+      position: absolute;
+      top: 80px;
+    }
   }
 
   &__link {
     color: inherit;
     font-size: inherit;
+    text-decoration: underline;
   }
 
   &__checkbox {
     font-size: 11px;
-    @media only screen and (max-width: 575.98px) {
-      font-size: 9px;
-    }
   }
 
   &__label {
@@ -114,7 +116,7 @@
   }
 
   &__ckeckbox--checked::before {
-    content: "";
+    content: '';
     position: absolute;
     top: 0;
     left: 0;
@@ -122,23 +124,18 @@
     height: 15px;
     border: 1px solid $color-secondary;
     background-color: transparent;
-    @media only screen and (max-width: 575.98px) {
-      width: 10px;
-      height: 10px;
-    }
   }
 
   &__ckeckbox--checked::after {
-    content: "\2713";
+    content: '\2714';
+    color: inherit;
     position: absolute;
-    left: 3px;
+    left: 1px;
+    top: -2px;
     opacity: 0;
   }
 
   &__input:checked + &__ckeckbox--checked::after {
     opacity: 1;
   }
-}
-
-@media only screen and (max-width: 575.98px) {
 }

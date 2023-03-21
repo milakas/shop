@@ -1,4 +1,4 @@
-@import "../variables/variables";
+@import '../variables/variables';
 
 /* Best Section */
 
@@ -14,8 +14,12 @@
     font-size: 24px;
     @media only screen and (max-width: 575.98px) {
       grid-column: auto / span 12;
-      font-size: 18px;
-      transition: 0.3s ease-in-out;
+    }
+  }
+
+  &__price {
+    @media only screen and (max-width: 575.98px) {
+      font-size: 85%;
     }
   }
 
@@ -29,7 +33,10 @@
   }
 
   &__card {
+    display: block;
     grid-column: auto/span 3;
+    text-decoration: none;
+    color: inherit;
     @media only screen and (max-width: 991.98px) {
       grid-column: auto/span 4;
     }
@@ -41,21 +48,14 @@
   &__image {
     margin-bottom: 15px;
     width: 100%;
-    @media only screen and (max-width: 575.98px) {
-      margin-bottom: 10px;
-    }
   }
 
   &__text {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    max-height: 190px;
+    min-height: 10rem;
     margin-bottom: 8.39px;
-    @media only screen and (max-width: 575.98px) {
-      justify-content: flex-start;
-      gap: 8px;
-    }
   }
 
   &__text-top {
@@ -66,27 +66,12 @@
       flex-direction: column;
       justify-content: flex-start;
       align-items: flex-start;
-    }
-  }
-
-  &__name {
-    @media only screen and (max-width: 575.98px) {
-      font-size: 14px;
-      line-height: 2;
-    }
-  }
-
-  &__price {
-    @media only screen and (max-width: 575.98px) {
-      font-size: 12px;
+      gap: 5px;
     }
   }
 
   &__text-made {
-    font-size: 13px;
-    @media only screen and (max-width: 575.98px) {
-      display: none;
-    }
+    font-size: 75%;
   }
 
   &__sizes {

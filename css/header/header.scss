@@ -1,25 +1,24 @@
-@import "../variables/variables";
+@import '../variables/variables';
 
 /* Header */
 
 .header {
+  max-height: 85px;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  z-index: 3;
-  padding: 25px 18px;
+  z-index: 10;
+  padding: 25px 27px;
   background-color: $color-bg-primary;
-  @media only screen and (max-width: 575.98px) {
-    padding-top: $padding-xs;
-    padding-bottom: $padding-xs;
-    transition: 0.3s ease-in;
-  }
+  -webkit-filter: drop-shadow(0 0 0.75rem #384a5a3f);
+  filter: drop-shadow(0 0 0.75rem #384a5a3f);
 
   &__container {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     align-items: center;
+    -moz-column-gap: 16px;
     column-gap: 16px;
     row-gap: 8px;
     width: 100%;
@@ -31,9 +30,10 @@
   &__logo {
     max-width: 100%;
     grid-column: 1 / span 2;
+    cursor: pointer;
     @media only screen and (max-width: 575.98px) {
-      grid-column: 1 / span 3;
-      height: 70%;
+      grid-column: 1 / span 4;
+      transition: 0.3s ease-in-out;
     }
   }
 
@@ -57,6 +57,18 @@
 
   &__nav {
     grid-column: 7 / span 5;
+  }
+
+  &__basket {
+    display: flex;
+    flex-direction: row-reverse;
+    @media only screen and (max-width: 991.98px) {
+      grid-column: 6 / span 1;
+    }
+
+    &-svg {
+      cursor: pointer;
+    }
   }
 }
 /* NavBar */
@@ -83,71 +95,69 @@
 .menu {
   &__hamburger {
     display: none;
+    grid-column: 5 / span 1;
     @media only screen and (max-width: 991.98px) {
-      display: block;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
     }
   }
   &__btn {
     display: flex;
     align-items: center;
-    position: absolute;
-    top: 25px;
-    right: 25px;
     width: 26px;
     height: 26px;
     cursor: pointer;
     z-index: 1;
+    border-color: currentColor;
 
     @media only screen and (max-width: 575.98px) {
       top: $padding-xs;
       transition: 0.3s ease-in;
     }
   }
-  // добавляем "гамбургер"
   &__btn > span,
   &__btn > span::before,
   &__btn > span::after {
     display: block;
     position: absolute;
-    width: 100%;
-    height: 2px;
+    width: 26px;
+    height: 1px;
     background-color: $color-primary;
   }
 
   &__btn > span::before {
-    content: "";
+    content: '';
     top: -8px;
   }
   &__btn > span::after {
-    content: "";
+    content: '';
     top: 8px;
   }
-  // контейнер меню
   &__box {
+    position: relative;
+    z-index: -1;
     display: block;
     position: fixed;
     visibility: hidden;
-    top: 0;
-    right: -100px;
-    width: 200px;
+    top: 20px;
+    left: -100px;
+    width: 100%;
     height: 100vh;
     margin: 0;
     padding: 80px 10px;
     list-style: none;
     text-align: center;
-    background-color: #eceff1be;
-    box-shadow: 1px 0px 6px rgba(0, 0, 0, 0.2);
+    background-color: $color-bg-primary;
   }
-  // элементы меню
   &__item {
-    display: block;
-    padding: 12px 24px;
+    padding: 0 12px;
     text-align: left;
-    color: $color-secondary;
-    font-size: 13px;
-  }
-  &__item:hover {
-    background-color: $color-primary;
+    color: $color-primary !important;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
   }
 }
 
@@ -156,7 +166,6 @@
   &:checked ~ .menu__btn > span {
     transform: rotate(45deg);
     transition: 0.3s ease-in-out;
-    background-color: $color-secondary;
   }
   &:checked ~ .menu__btn > span::before {
     top: 0;
@@ -168,30 +177,10 @@
     top: 0;
     transform: rotate(90deg);
     transition: 0.3s ease-in-out;
-    background-color: $color-secondary;
   }
   &:checked ~ .menu__box {
     visibility: visible;
-    right: 0;
+    left: 0;
     transition: 0.3s ease-in-out;
-  }
-}
-
-@media only screen and (max-width: 767.98px) {
-  .header {
-    &__title,
-    &__nav {
-      display: none;
-    }
-  }
-
-  .menu {
-    &__hamburger {
-      display: block;
-    }
-
-    &__btn {
-      transform: translateY(-0.5px);
-    }
   }
 }

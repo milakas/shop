@@ -3,7 +3,7 @@
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-column-gap: 16px;
-  padding: 28px 18px;
+  padding: 28px 25px;
 }
 .best__title {
   grid-column: 2/span 10;
@@ -12,8 +12,11 @@
 @media only screen and (max-width: 575.98px) {
   .best__title {
     grid-column: auto/span 12;
-    font-size: 18px;
-    transition: 0.3s ease-in-out;
+  }
+}
+@media only screen and (max-width: 575.98px) {
+  .best__price {
+    font-size: 85%;
   }
 }
 .best__product-cards {
@@ -25,7 +28,10 @@
   border-bottom: 1px solid #2d1e1e;
 }
 .best__card {
+  display: block;
   grid-column: auto/span 3;
+  text-decoration: none;
+  color: inherit;
 }
 @media only screen and (max-width: 991.98px) {
   .best__card {
@@ -41,23 +47,12 @@
   margin-bottom: 15px;
   width: 100%;
 }
-@media only screen and (max-width: 575.98px) {
-  .best__image {
-    margin-bottom: 10px;
-  }
-}
 .best__text {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  max-height: 190px;
+  min-height: 10rem;
   margin-bottom: 8.39px;
-}
-@media only screen and (max-width: 575.98px) {
-  .best__text {
-    justify-content: flex-start;
-    gap: 8px;
-  }
 }
 .best__text-top {
   display: flex;
@@ -69,26 +64,11 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-  }
-}
-@media only screen and (max-width: 575.98px) {
-  .best__name {
-    font-size: 14px;
-    line-height: 2;
-  }
-}
-@media only screen and (max-width: 575.98px) {
-  .best__price {
-    font-size: 12px;
+    gap: 5px;
   }
 }
 .best__text-made {
-  font-size: 13px;
-}
-@media only screen and (max-width: 575.98px) {
-  .best__text-made {
-    display: none;
-  }
+  font-size: 75%;
 }
 .best__sizes {
   display: flex;
